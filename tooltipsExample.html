@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .tooltip-inner {
+            max-width: 350px;
+            /* If max-width does not work, try using width instead */
+            width: 350px;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            /* Use this instead of transform: translate(-50%, 0) */
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+    </style>
+    <body>
+        <h2 style="text-align: center;">
+            Basic Tooltip
+        </h2>
+        <p>
+            Move the mouse over the text below:
+        </p>
+        <div class="tooltip">
+            Hover over me
+            <span class="tooltiptext">
+                Tooltip text
+            </span>
+        </div>
+        <p>
+            Note that the position of the tooltip text isn't very good. Go back to the tutorial and continue reading on how to position the tooltip in a desirable way.
+        </p>
+    </body>
+</html>
